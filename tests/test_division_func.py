@@ -1,4 +1,4 @@
-from utils import division
+from my_funcs.utils import division
 import pytest
 
 
@@ -11,7 +11,7 @@ def test_division_good(a, b, expected_result):
 
 
 @pytest.mark.parametrize('expected_excpetion, dividend, divider', [(ZeroDivisionError, 10, 0),
-                                                         (TypeError, 20, '2')])
+                                                                   (TypeError, 20, '2')])
 def test_zero_division(expected_excpetion, dividend, divider):
     with pytest.raises(expected_excpetion):
         division(dividend, divider)
